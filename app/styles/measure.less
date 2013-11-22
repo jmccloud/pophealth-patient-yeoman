@@ -1,0 +1,120 @@
+.population-btn {
+  .btn;
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 2.5em;
+  border: 1px solid white;
+  padding: 0px 7px;
+  background-color: @gray-lighter;
+  width: 100%;
+  .query-result {
+    .pull-right;
+    font-size: 1.3em;
+  }
+  .title {
+    .pull-left;
+  }
+  &.active {
+    background-color: @brand-primary;
+    color: white;
+  }
+}
+
+@table-border-color: white;
+.table {
+  thead {
+    background-color: @gray-lighter;
+    > tr > th {
+      border: none;
+      font-weight: 700;
+      &.pid {
+        text-transform: uppercase;
+        font-size: 1.2em;
+      }
+    }
+  }
+  > thead > tr > th, > tbody > tr > td {
+    line-height: 2;
+    font-size: 1em;
+    vertical-align: middle;
+    .btn-default {
+      padding: 7px 10px;
+    }
+  }
+}
+
+.measure-border {
+    background-color: @brand-primary;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.first-border {
+  background-color: lighten(@brand-primary, 40%);
+}
+.second-border {
+  background-color: lighten(@brand-primary, 30%);
+}
+.third-border {
+  background-color: lighten(@brand-primary, 20%);
+}
+
+.measure-item {
+  background-color: white;
+  border-radius: 10px;
+  margin: 2px 2px 2px 20px;
+}
+.conjunction, .temporal-operator {
+  background-color: @gray-lighter;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 10px;
+  font-weight: bold;
+  display: inline-block;
+}
+label {
+  padding: 10px;
+}
+.icon {
+  font-family: FontAwesome;
+  color: @brand-primary;
+  padding: 5px 8px;
+  font-size: 24px;
+  border: 2px solid @brand-primary;
+  border-radius: 20px; 
+  margin-right: 5px;
+}
+.encounter .occurrence:before {
+  content: "\f0f0";
+  .icon;
+}
+.diagnosis .occurrence:before {
+  content: "\f0f1";
+  .icon;
+}
+.medication .occurrence:before {
+  content: "\f0fa";
+  .icon;
+}
+.characteristic .occurrence:before {
+  content: "\f007";
+  .icon;
+}
+.procedure .occurrence:before {
+  content: "\f0c4";
+  .icon;
+}
+
+.condition .occurrence:before {
+  content: "\f0f1";
+  .icon;
+}
+.laboratory .occurrence:before {
+  content: "\f0c3";
+  .icon;
+}
+
+
+
+.measure-text {
+}

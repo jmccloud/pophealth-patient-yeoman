@@ -1,0 +1,259 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" id="brand" href="/"><img src="images/pophealth_logo_small-trans.png"></a>
+          <ul id="mainBreadcrumbs" class="breadcrumb pull-left">
+              <li></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li class="divider-vertical"></li>
+            <li>
+              <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="User">
+                    <li></li>
+      
+                   <li class="divider"></li>
+                  <li class="dropdown-submenu pull-left">
+                    <a tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="icon-star"></i> 
+                      Admin
+                    </a>
+                    <ul  style="margin-left:0px; margin-right:20px" class="dropdown-menu" role="menu" aria-labelledby="Admin">
+                      <li><i class="icon-plus"></i></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+            <li class="divider-vertical"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left-sidebar">
+          <div data-view-cid="view802" data-model-cid="c189">
+            <button class="population-btn active" id="IPP">
+              <span class="title">Initial Patient Population</span>
+              <span class="query-result">0</span>
+            </button>
+            <button class="population-btn" id="NUMER">
+              <span class="title">Numerator</span>
+              <span class="query-result">0</span>
+            </button>
+            <button class="population-btn" id="DENOM">
+              <span class="title">Denominator</span>
+              <span class="query-result">0</span>
+            </button>
+            <button class="population-btn" id="DENEX">
+              <span class="title">Exclusions</span>
+              <span class="query-result">0</span>
+            </button>
+            <button class="population-btn" id="DENEXCEP">
+              <span class="title">Exceptions</span>
+              <span class="query-result">0</span>
+            </button>
+            <button class="population-btn" id="antinumerator">
+              <span class="title">Outliers</span>
+              <span class="query-result">0</span>
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <div class="measureBox">
+            <div id="initialPopulationItems">
+              <div class="measure-border first-border">       
+                <div class="measure-item">
+                  <div class="measure-border second-border">       
+                    <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_36" data-precondition-id="36">
+                      <div draggable="true" class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_36">
+                        <label>
+                          <span class="occurrence">Occurrence A:</span> diagnosis, active
+                        </label>       Acute Tonsillitis         
+                        <div class="negation_text"></div>     
+                       </div>
+                        <span class="SDU temporal-operator">Starts During</span>
+                        <span class="block-down-arrow"></span>
+                        <div class="measure-border third-border">       
+                          <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">                                             
+                            <div draggable="true" class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">              
+                              <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
+                              <div class="negation_text"></div>     
+                              </div></div>     
+                              </div></div>     
+                              </div><span class="conjunction or">or</span>
+                                <div class="measure-border second-border">       
+                                  <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_34" data-precondition-id="34">                                             
+                                    <div draggable="true" class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_34">              
+                                      <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis          
+                                      <div class="negation_text"></div>     
+                                    </div>
+                                    <span class="SDU temporal-operator">Starts During</span>
+                                    <span class="block-down-arrow"></span>
+                                    <div class="measure-border third-border">       
+                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">                                             
+                                        <div draggable="true" class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">              
+                                          <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
+                                          <div class="negation_text"></div>     
+                                        </div>
+                                      </div>     
+                                    </div>
+                                  </div>     
+                                </div>
+                              </div>     
+                            </div>
+                            <span class="conjunction or">or</span>
+                            <div class="measure-border first-border">       
+                              <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_32" data-precondition-id="32">                                             
+                                <div draggable="true" class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_32">              
+                                  <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
+                                  <div class="negation_text"></div>     
+                                </div>
+                                <span class="DURING temporal-operator">During</span>
+                                <span class="block-down-arrow"></span>
+                                <div class="measure-border second-border">       
+                                  <div class="measure-item logicLeaf"ia-id="GROUP_DURING_CHILDREN_49">   
+                                    <span class="conjunction or">or</span>       
+                                    <div class="measure-border third-border">       
+                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_27">                                             
+                                        <div draggable="true" class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_27">              
+                                          <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis          
+                                          <div class="negation_text"></div>     
+                                        </div>
+                                      </div>     
+                                    </div>
+                                    <span class="conjunction or">or</span>
+                                    <div class="measure-border third-border">       
+                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_29">                                             
+                                        <div draggable="true" class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_29">              
+                                          <label>
+                                            <span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis          
+                                            <div class="negation_text"></div>     
+                                          </div>
+                                        </div>     
+                                      </div>
+                                    </div>     
+                                  </div>
+                                </div>     
+                              </div>
+                            </div>     
+                          </div>
+                          <span class="conjunction and">and</span>
+                          <div class="measure-border first-border">       
+                            <div class="measure-item logicLeaf " data-criteria-id="MedicationOrderAntibioticMedications_precondition_25" data-precondition-id="25">                                             
+                              <div draggable="true" class="measure-text medication logicLeaf" data-criteria-id="MedicationOrderAntibioticMedications_precondition_25">              
+                                <label> medication, ordered</label>       Antibiotic Medications          
+                                <div class="negation_text"></div>     
+                              </div>
+                              <span class="SAS temporal-operator">&lt;= 3 days Starts After Start of</span>
+                              <span class="block-down-arrow"></span>
+                              <div class="measure-border second-border">       
+                                <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3">                                             
+                                  <div draggable="true" class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3">              
+                                    <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
+                                    <div class="negation_text"></div>     
+                                  </div>
+                                </div>     
+                              </div>
+                            </div>     
+                          </div>
+                          <span class="conjunction and">and</span>
+                          <div class="measure-border first-border">       
+                            <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_23" data-precondition-id="23">                                             
+                              <div draggable="true" class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_23">              
+                                <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit   During the measurement period       
+                                <div class="negation_text"></div>     
+                              </div>
+                            </div>     
+                          </div>
+                        </div>     
+                      </div>
+                      <span class="conjunction and">and</span>
+                      <div class="measure-border first-border">       
+                        <div class="measure-item logicLeaf " d-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_21" data-precondition-id="21"> 
+                          <div draggable="true" class="measure-text patient characteristic logicLeaf" data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_21">              
+                            <label> patient characteristic</label>       birth date   &lt; 18 years Starts Before Start of the measurement period       
+                            <div class="negation_text"></div>     
+                          </div>
+                        </div>     
+                      </div>
+                      <span class="conjunction and">and</span>
+                      <div class="measure-border first-measure">       
+                        <div class="measure-item logicLeaf " data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_19" data-precondition-id="19"> 
+                          <div draggable="true" class="measure-text patient characteristic logicLeaf" data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_19">              
+                            <label> patient characteristic</label>       birth date   &gt;= 2 years Starts Before Start of the measurement period       
+                            <div class="negation_text">
+                            </div>     
+                          </div>
+                        </div>       
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/hello.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/bootstrap.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
