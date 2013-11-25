@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>pophealth Measure View</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -54,165 +54,135 @@
       </div>
       <div class="row">
         <div class="left-sidebar">
-          <div data-view-cid="view802" data-model-cid="c189">
-            <button class="population-btn active" id="IPP">
-              <span class="title">Initial Patient Population</span>
-              <span class="query-result">0</span>
-            </button>
-            <button class="population-btn" id="NUMER">
-              <span class="title">Numerator</span>
-              <span class="query-result">0</span>
-            </button>
-            <button class="population-btn" id="DENOM">
-              <span class="title">Denominator</span>
-              <span class="query-result">0</span>
-            </button>
-            <button class="population-btn" id="DENEX">
-              <span class="title">Exclusions</span>
-              <span class="query-result">0</span>
-            </button>
-            <button class="population-btn" id="DENEXCEP">
-              <span class="title">Exceptions</span>
-              <span class="query-result">0</span>
-            </button>
-            <button class="population-btn" id="antinumerator">
-              <span class="title">Outliers</span>
-              <span class="query-result">0</span>
-            </button>
-          </div>
+          <button class="population-btn active" id="IPP">
+            <span class="title">Initial Patient Population</span>
+            <span class="query-result">0</span>
+          </button>
+          <button class="population-btn" id="NUMER">
+            <span class="title">Numerator</span>
+            <span class="query-result">0</span>
+          </button>
+          <button class="population-btn" id="DENOM">
+            <span class="title">Denominator</span>
+            <span class="query-result">0</span>
+          </button>
+          <button class="population-btn" id="DENEX">
+            <span class="title">Exclusions</span>
+            <span class="query-result">0</span>
+          </button>
+          <button class="population-btn" id="DENEXCEP">
+            <span class="title">Exceptions</span>
+            <span class="query-result">0</span>
+          </button>
+          <button class="population-btn" id="antinumerator">
+            <span class="title">Outliers</span>
+            <span class="query-result">0</span>
+          </button>
         </div>
         <div class="main">
-          <div class="measureBox">
-            <div id="initialPopulationItems">
-              <div class="measure-border first-border">       
+          <div class="measure-border first-border">       
+            <div class="measure-item">
+              <div class="measure-border second-border">       
                 <div class="measure-item">
-                  <div class="measure-border second-border">       
-                    <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_36" data-precondition-id="36">
-                      <div  class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_36">
-                        <label>
-                          <span class="occurrence">Occurrence A:</span> diagnosis, active
-                        </label>       Acute Tonsillitis         
-                        <div class="negation_text"></div>     
-                       </div>
-                        <span class="SDU temporal-operator">Starts During</span>
-                        <span class="block-down-arrow"></span>
-                        <div class="measure-border third-border">       
-                          <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">                                             
-                            <div  class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">              
-                              <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
-                              <div class="negation_text"></div>     
-                              </div></div>     
-                              </div></div>     
-                              </div><span class="conjunction or">or</span>
-                                <div class="measure-border second-border">       
-                                  <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_34" data-precondition-id="34">                                             
-                                    <div  class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_34">              
-                                      <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis          
-                                      <div class="negation_text"></div>     
-                                    </div>
-                                    <span class="SDU temporal-operator">Starts During</span>
-                                    <span class="block-down-arrow"></span>
-                                    <div class="measure-border third-border">       
-                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">                                             
-                                        <div  class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_39">              
-                                          <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
-                                          <div class="negation_text"></div>     
-                                        </div>
-                                      </div>     
-                                    </div>
-                                  </div>     
-                                </div>
-                              </div>     
-                            </div>
-                            <span class="conjunction or">or</span>
-                            <div class="measure-border first-border">       
-                              <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_32" data-precondition-id="32">                                             
-                                <div  class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_32">              
-                                  <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
-                                  <div class="negation_text"></div>     
-                                </div>
-                                <span class="DURING temporal-operator">During</span>
-                                <span class="block-down-arrow"></span>
-                                <div class="measure-border second-border">       
-                                  <div class="measure-item logicLeaf"ia-id="GROUP_DURING_CHILDREN_49">   
-                                    <span class="conjunction or">or</span>       
-                                    <div class="measure-border third-border">       
-                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_27">                                             
-                                        <div  class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcutePharyngitis1_precondition_27">              
-                                          <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis          
-                                          <div class="negation_text"></div>     
-                                        </div>
-                                      </div>     
-                                    </div>
-                                    <span class="conjunction or">or</span>
-                                    <div class="measure-border third-border">       
-                                      <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_29">                                             
-                                        <div  class="measure-text diagnosis logicLeaf" data-criteria-id="OccurrenceAAcuteTonsillitis2_precondition_29">              
-                                          <label>
-                                            <span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis          
-                                            <div class="negation_text"></div>     
-                                          </div>
-                                        </div>     
-                                      </div>
-                                    </div>     
-                                  </div>
-                                </div>     
-                              </div>
-                            </div>     
+                  <div  class="measure-text diagnosis">                
+                    <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis          
+                   </div>
+                    <span class="SDU temporal-operator">Starts During</span>
+                    <div class="measure-border third-border">       
+                      <div class="measure-item "> 
+                        <div class="measure-text encounter">     
+                          <label>
+                            <span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
                           </div>
-                          <span class="conjunction and">and</span>
-                          <div class="measure-border first-border">       
-                            <div class="measure-item logicLeaf " data-criteria-id="MedicationOrderAntibioticMedications_precondition_25" data-precondition-id="25">                                             
-                              <div  class="measure-text medication logicLeaf" data-criteria-id="MedicationOrderAntibioticMedications_precondition_25">              
-                                <label span class="occurrence"> medication, ordered</label>       Antibiotic Medications          
-                                <div class="negation_text"></div>     
-                              </div>
-                              <span class="SAS temporal-operator">&lt;= 3 days Starts After Start of</span>
-                              <span class="block-down-arrow"></span>
-                              <div class="measure-border second-border">       
-                                <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3">                                             
-                                  <div  class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3">              
-                                    <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
-                                    <div class="negation_text"></div>     
-                                  </div>
-                                </div>     
-                              </div>
-                            </div>     
-                          </div>
-                          <span class="conjunction and">and</span>
-                          <div class="measure-border first-border">       
-                            <div class="measure-item logicLeaf " data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_23" data-precondition-id="23">                                             
-                              <div  class="measure-text encounter logicLeaf" data-criteria-id="OccurrenceAAmbulatoryEdVisit3_precondition_23">              
-                                <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit   During the measurement period       
-                                <div class="negation_text"></div>     
-                              </div>
-                            </div>     
-                          </div>
-                          <span class="conjunction and">and</span>
-                          <div class="measure-border first-border">       
-                            <div class="measure-item logicLeaf " d-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_21" data-precondition-id="21"> 
-                              <div  class="measure-text patient characteristic logicLeaf" data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_21">              
-                                <label span class="occurrence"> patient characteristic</label>       birth date   &lt; 18 years Starts Before Start of the measurement period       
-                                <div class="negation_text"></div>     
-                              </div>
-                            </div>     
-                          </div>
-                          <span class="conjunction and">and</span>
-                          <div class="measure-border first-border">       
-                            <div class="measure-item logicLeaf " data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_19" data-precondition-id="19"> 
-                              <div  class="measure-text patient characteristic logicLeaf" data-criteria-id="PatientCharacteristicBirthdateBirthDate_precondition_19">              
-                                <label span class="occurrence"> patient characteristic</label>       birth date   &gt;= 2 years Starts Before Start of the measurement period       
-                                <div class="negation_text">
-                                </div>     
-                              </div>
-                            </div>     
-                          </div>
-                        </div>       
+                        </div>     
                       </div>
+                    </div>     
+                  </div>
+                  <span class="conjunction or">or</span>
+                  <div class="measure-border second-border">       
+                  <div class="measure-item">  
+                    <div class="measure-text diagnosis">     
+                      <label>
+                        <span class="occurrence">Occurrence A:</span> diagnosis, active
+                      </label>       Acute Pharyngitis          
+                      <div class="negation_text">
+                      </div>     
+                    </div>
+                    <span class="temporal-operator">Starts During</span>
+                      <div class="measure-border third-border">       
+                        <div class="measure-item ">
+                          <div class="measure-text encounter">     
+                            <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit                   
+                          </div>
+                        </div>     
+                      </div>
+                    </div>     
+                  </div>
+                </div>     
+              </div>
+              <span class="conjunction or">or</span>
+              <div class="measure-border first-border">       
+                <div class="measure-item">  
+                  <div class="measure-text encounter">      
+                    <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit             
+                    </div>
+                    <span class="DURING temporal-operator">During</span>
+                    <span class="block-down-arrow"></span>
+                    <div class="measure-border second-border">       
+                      <div class="measure-item">   
+                        <span class="conjunction or">or</span>       
+                        <div class="measure-border third-border">       
+                          <div class="measure-item">
+                            <div class="measure-text diagnosis">    
+                              <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis           
+                            </div>
+                          </div>     
+                        </div>
+                        <span class="conjunction or">or</span>
+                        <div class="measure-border third-border">       
+                          <div class="measure-item">   
+                            <div class="measure-text diagnosis">     
+                              <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis            
+                            </div>
+                          </div>     
+                        </div>
+                      </div>     
+                    </div>
+                  </div>     
+                </div>
+                <span class="conjunction and">and</span>
+                <div class="measure-border first-border">       
+                  <div class="measure-item">                                        
+                    <div class="measure-text medication">            
+                      <label> <span class="occurrence"> medication, ordered</label>       Antibiotic Medications          
+                    </div>
+                    <span class="SAS temporal-operator">&lt;= 3 days Starts After Start of</span>
+                    <div class="measure-border second-border">       
+                      <div class="measure-item">                    
+                        <div class="measure-text encounter">                         
+                          <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
+                        </div>
+                      </div>     
+                    </div>
+                  </div>     
+                </div>
+                <span class="conjunction and">and</span>
+                <div class="measure-border first-border">       
+                  <div class="measure-item">                                          
+                    <div class="measure-text encounter">      
+                      <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit   During the measurement period       
+                    </div>
+                  </div>     
+                </div>
+                <span class="conjunction and">and</span>
+                <div class="measure-border first-border">       
+                  <div class="measure-item"> 
+                    <div  class="measure-text patient characteristic" >              
+                      <label> <span class="occurrence"> patient characteristic</label>       birth date   &gt;= 2 years Starts Before Start of the measurement period             
                     </div>
                   </div> 
                 </div>
-              </div>
+              </div>     
             </div>
           </div>
         </div>

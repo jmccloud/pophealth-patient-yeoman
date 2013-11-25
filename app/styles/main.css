@@ -9342,9 +9342,11 @@ fieldset[disabled] .population-btn {
 .population-btn .title {
   float: left !important;
   float: left;
+  width: 100px;
 }
 
 .population-btn.active {
+  display: inline-block;
   color: white;
   background-color: #4b979d;
 }
@@ -9414,89 +9416,129 @@ label {
 }
 
 .icon {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .encounter .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0f0";
 }
 
 .diagnosis .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0f1";
 }
 
 .medication .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0fa";
 }
 
 .characteristic .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f007";
 }
 
 .procedure .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0c4";
 }
 
 .condition .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0f1";
 }
 
 .laboratory .occurrence:before {
-  padding: 5px 8px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
   margin-right: 5px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
+  text-align: center;
+  vertical-align: center;
   border: 2px solid #4b979d;
-  border-radius: 20px;
+  border-radius: 25px;
   content: "\f0c3";
 }
 

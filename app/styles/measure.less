@@ -13,10 +13,14 @@
   }
   .title {
     .pull-left;
+    width: 100px;
+  }
+  .query-result {
   }
   &.active {
     background-color: @brand-primary;
     color: white;
+    display: inline-block
   }
 }
 
@@ -64,6 +68,7 @@
   border-radius: 10px;
   margin: 2px 2px 2px 20px;
 }
+
 .conjunction, .temporal-operator {
   background-color: @gray-lighter;
   border-radius: 10px;
@@ -105,11 +110,6 @@ label {
   content: "\f007";
   .icon;
 }
-.patient .occurrence:before {
-  content: "\f007";
-  .icon;
-}
-
 .procedure .occurrence:before {
   content: "\f0c4";
   .icon;
@@ -124,7 +124,3 @@ label {
   .icon;
 }
 
-
-
-.measure-text {
-}
