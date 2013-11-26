@@ -1,5 +1,4 @@
 .population-btn {
-  .btn;
   font-weight: 700;
   font-size: 1.1em;
   line-height: 2.5em;
@@ -8,11 +7,9 @@
   background-color: @gray-lighter;
   width: 100%;
   .query-result {
-    .pull-right;
     font-size: 1.3em;
   }
   .title {
-    .pull-left;
     width: 100px;
   }
   .query-result {
@@ -23,30 +20,6 @@
     display: inline-block
   }
 }
-
-@table-border-color: white;
-.table {
-  thead {
-    background-color: @gray-lighter;
-    > tr > th {
-      border: none;
-      font-weight: 700;
-      &.pid {
-        text-transform: uppercase;
-        font-size: 1.2em;
-      }
-    }
-  }
-  > thead > tr > th, > tbody > tr > td {
-    line-height: 2;
-    font-size: 1em;
-    vertical-align: middle;
-    .btn-default {
-      padding: 7px 10px;
-    }
-  }
-}
-
 .measure-border {
     background-color: @brand-primary;
     padding: 2px;
@@ -77,10 +50,7 @@
   font-weight: bold;
   display: inline-block;
 }
-label {
-  padding: 10px;
-}
-.icon {
+.measure-view-icon {
   font-family: FontAwesome;
   display: inline-block;
   width: 42px;
@@ -96,31 +66,31 @@ label {
 }
 .encounter .occurrence:before {
   content: "\f0f0";
-  .icon;
+  .measure-view-icon;
 }
 .diagnosis .occurrence:before {
   content: "\f0f1";
-  .icon;
+  .measure-view-icon;
 }
 .medication .occurrence:before {
   content: "\f0fa";
-  .icon;
+  .measure-view-icon;
 }
 .characteristic .occurrence:before {
   content: "\f007";
-  .icon;
+  .measure-view-icon;
 }
 .procedure .occurrence:before {
   content: "\f0c4";
-  .icon;
+  .measure-view-icon;
 }
 
 .condition .occurrence:before {
   content: "\f0f1";
-  .icon;
+  .measure-view-icon;
 }
 .laboratory .occurrence:before {
   content: "\f0c3";
-  .icon;
+  .measure-view-icon;
 }
 
