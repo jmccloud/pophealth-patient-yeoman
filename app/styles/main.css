@@ -1635,12 +1635,12 @@ th {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #dddddd;
 }
 
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #dddddd;
 }
 
 .table > caption + thead > tr:first-child > th,
@@ -1653,7 +1653,7 @@ th {
 }
 
 .table > tbody + tbody {
-  border-top: 2px solid #ffffff;
+  border-top: 2px solid #dddddd;
 }
 
 .table .table {
@@ -1670,7 +1670,7 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #ffffff;
+  border: 1px solid #dddddd;
 }
 
 .table-bordered > thead > tr > th,
@@ -1679,7 +1679,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ffffff;
+  border: 1px solid #dddddd;
 }
 
 .table-bordered > thead > tr > th,
@@ -1795,7 +1795,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border: 1px solid #ffffff;
+    border: 1px solid #dddddd;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch;
   }
@@ -5674,7 +5674,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #dddddd;
 }
 
 .panel > .table-bordered,
@@ -9253,95 +9253,20 @@ h2 {
 }
 
 .population-btn {
-  display: inline-block;
   width: 100%;
-  padding: 6px 12px;
   padding: 0 7px;
-  margin-bottom: 0;
-  font-size: 14px;
   font-size: 1.1em;
-  font-weight: normal;
   font-weight: 700;
-  line-height: 1.428571429;
   line-height: 2.5em;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
   background-color: #f2f2f2;
-  background-image: none;
-  border: 1px solid transparent;
   border: 1px solid white;
-  border-radius: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-       -o-user-select: none;
-          user-select: none;
-}
-
-.population-btn:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-.population-btn:hover,
-.population-btn:focus {
-  color: #333333;
-  text-decoration: none;
-}
-
-.population-btn:active,
-.population-btn.active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.population-btn.disabled,
-.population-btn[disabled],
-fieldset[disabled] .population-btn {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.population-btn [class^="icon-"].icon-large,
-.population-btn [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-
-.population-btn [class^="icon-"].icon-spin,
-.population-btn [class*=" icon-"].icon-spin {
-  display: inline-block;
-}
-
-.population-btn [class^="icon-"].pull-left.icon-2x,
-.population-btn [class*=" icon-"].pull-left.icon-2x,
-.population-btn [class^="icon-"].pull-right.icon-2x,
-.population-btn [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .18em;
-}
-
-.population-btn [class^="icon-"].icon-spin.icon-large,
-.population-btn [class*=" icon-"].icon-spin.icon-large {
-  line-height: .8em;
 }
 
 .population-btn .query-result {
-  float: right !important;
-  float: right;
   font-size: 1.3em;
 }
 
 .population-btn .title {
-  float: left !important;
-  float: left;
   width: 100px;
 }
 
@@ -9351,47 +9276,21 @@ fieldset[disabled] .population-btn {
   background-color: #4b979d;
 }
 
-.table thead {
-  background-color: #f2f2f2;
-}
-
-.table thead > tr > th {
-  font-weight: 700;
-  border: none;
-}
-
-.table thead > tr > th.pid {
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-.table > thead > tr > th,
-.table > tbody > tr > td {
-  font-size: 1em;
-  line-height: 2;
-  vertical-align: middle;
-}
-
-.table > thead > tr > th .btn-default,
-.table > tbody > tr > td .btn-default {
-  padding: 7px 10px;
-}
-
 .measure-border {
   padding: 2px;
   background-color: #4b979d;
   border-radius: 10px;
 }
 
-.first-border {
+.measure-border-1 {
   background-color: #cde5e7;
 }
 
-.second-border {
+.measure-border-2 {
   background-color: #aad3d7;
 }
 
-.third-border {
+.measure-border-3 {
   background-color: #88c2c6;
 }
 
@@ -9411,16 +9310,12 @@ fieldset[disabled] .population-btn {
   border-radius: 10px;
 }
 
-label {
-  padding: 10px;
-}
-
-.icon {
+.measure-view-icon {
   display: inline-block;
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9435,7 +9330,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9451,7 +9346,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9467,7 +9362,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9483,7 +9378,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9499,7 +9394,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9515,7 +9410,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;
@@ -9531,7 +9426,7 @@ label {
   width: 42px;
   height: 42px;
   padding-top: 2px;
-  margin-right: 5px;
+  margin: 10px;
   font-family: FontAwesome;
   font-size: 24px;
   color: #4b979d;

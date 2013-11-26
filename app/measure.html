@@ -55,7 +55,7 @@
       <div class="row">
         <div class="left-sidebar">
           <button class="population-btn btn active" id="IPP">
-            <span class="title pull-left">Initial Patient Population</span>
+            <span class="title pull-left">IPP</span>
             <span class="query-result pull-right">0</span>
           </button>
           <button class="population-btn btn" id="NUMER">
@@ -80,15 +80,15 @@
           </button>
         </div>
         <div class="main">
-          <div class="measure-border first-border">       
+          <div class="measure-border measure-border-1">       
             <div class="measure-item">
-              <div class="measure-border second-border">       
+              <div class="measure-border measure-border-2">       
                 <div class="measure-item">
                   <div  class="measure-text diagnosis">                
                     <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis          
                    </div>
                     <span class="SDU temporal-operator">Starts During</span>
-                    <div class="measure-border third-border">       
+                    <div class="measure-border measure-border-3">       
                       <div class="measure-item "> 
                         <div class="measure-text encounter">     
                           <label>
@@ -99,7 +99,7 @@
                     </div>     
                   </div>
                   <span class="conjunction or">or</span>
-                  <div class="measure-border second-border">       
+                  <div class="measure-border measure-border-2">       
                   <div class="measure-item">  
                     <div class="measure-text diagnosis">     
                       <label>
@@ -109,7 +109,7 @@
                       </div>     
                     </div>
                     <span class="temporal-operator">Starts During</span>
-                      <div class="measure-border third-border">       
+                      <div class="measure-border measure-border-3">       
                         <div class="measure-item ">
                           <div class="measure-text encounter">     
                             <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit                   
@@ -121,17 +121,17 @@
                 </div>     
               </div>
               <span class="conjunction or">or</span>
-              <div class="measure-border first-border">       
+              <div class="measure-border measure-border-1">       
                 <div class="measure-item">  
                   <div class="measure-text encounter">      
                     <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit             
                     </div>
                     <span class="DURING temporal-operator">During</span>
                     <span class="block-down-arrow"></span>
-                    <div class="measure-border second-border">       
+                    <div class="measure-border measure-border-2">       
                       <div class="measure-item">   
                         <span class="conjunction or">or</span>       
-                        <div class="measure-border third-border">       
+                        <div class="measure-border measure-border-3">       
                           <div class="measure-item">
                             <div class="measure-text diagnosis">    
                               <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Pharyngitis           
@@ -139,7 +139,7 @@
                           </div>     
                         </div>
                         <span class="conjunction or">or</span>
-                        <div class="measure-border third-border">       
+                        <div class="measure-border measure-border-3">       
                           <div class="measure-item">   
                             <div class="measure-text diagnosis">     
                               <label><span class="occurrence">Occurrence A:</span> diagnosis, active</label>       Acute Tonsillitis            
@@ -151,13 +151,13 @@
                   </div>     
                 </div>
                 <span class="conjunction and">and</span>
-                <div class="measure-border first-border">       
+                <div class="measure-border measure-border-1">       
                   <div class="measure-item">                                        
                     <div class="measure-text medication">            
                       <label> <span class="occurrence"> medication, ordered</label>       Antibiotic Medications          
                     </div>
                     <span class="SAS temporal-operator">&lt;= 3 days Starts After Start of</span>
-                    <div class="measure-border second-border">       
+                    <div class="measure-border measure-border-2">       
                       <div class="measure-item">                    
                         <div class="measure-text encounter">                         
                           <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit          
@@ -167,7 +167,7 @@
                   </div>     
                 </div>
                 <span class="conjunction and">and</span>
-                <div class="measure-border first-border">       
+                <div class="measure-border measure-border-1">       
                   <div class="measure-item">                                          
                     <div class="measure-text encounter">      
                       <label><span class="occurrence">Occurrence A:</span> encounter, performed</label>       Ambulatory/ED Visit   During the measurement period       
@@ -175,7 +175,7 @@
                   </div>     
                 </div>
                 <span class="conjunction and">and</span>
-                <div class="measure-border first-border">       
+                <div class="measure-border measure-border-1">       
                   <div class="measure-item"> 
                     <div  class="measure-text patient characteristic" >              
                       <label> <span class="occurrence"> patient characteristic</label>       birth date   &gt;= 2 years Starts Before Start of the measurement period             
