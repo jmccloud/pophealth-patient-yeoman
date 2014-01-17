@@ -33,11 +33,11 @@
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="User">
                     <li></li>
-      
+
                    <li class="divider"></li>
                   <li class="dropdown-submenu pull-left">
                     <a tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <i class="icon-star"></i> 
+                      <i class="icon-star"></i>
                       Admin
                     </a>
                     <ul  style="margin-left:0px; margin-right:20px" class="dropdown-menu" role="menu" aria-labelledby="Admin">
@@ -52,129 +52,126 @@
           </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="left-sidebar">
-          <h1><i class="fa fa-tasks"></i> measures</h1>
-          <div class="panel-group">
-            <h2>Outliers</h2>
-            <div class="panel-heading active">
-              <div class="indicator">
-                <i class="fa fa-exclamation-triangle"></i>
-              </div>
-              <div class="measure-title">Preventive Care And Screening: Tobacco - Use Assessment
-              </div>
-            </div>
-          </div>
-          <div class="panel-heading">
-            <div class="indicator">
+      <div class="patient">
+        <div class="col-measure-info">
+          <h1><i class="fa fa-tasks"></i> Measures</h1>
+          <h2>Outliers</h2>
+          <button class="btn btn-measure btn-primary" data-call-method="filter">
+            <span class="indicator">
               <i class="fa fa-exclamation-triangle"></i>
-            </div>
-            <div class="measure-title">Smoking And Tobacco Use Cessation, Medical Assistance - Advising Smokers And Tobacco Users To Quit
-            </div>
-          </div>
+            </span>
+            Controlling High Blood Pressure
+          </button>
+          <button class="btn btn-measure" data-call-method="filter">
+            <span class="indicator">
+              <i class="fa fa-exclamation-triangle"></i>
+            </span>
+            Preventive Care And Screening: Tobacco - Use Assessment
+          </button>
+          <button class="btn btn-measure" data-call-method="filter">
+            <span class="indicator">
+              <i class="fa fa-exclamation-triangle"></i>
+            </span>
+            Smoking And Tobacco Use Cessation, Medical Assistance - Advising Smokers And Tobacco Users To Quit
+          </button>
         </div>
-        <div class="main">
-          <h1 class="main-head"><i class="fa fa-user"></i> Enzo Ferrari</h1>
-          <div id="time-bar"></div>
-          <div class="demo col-md-offset-1">
-            <dl class="dl-demo dl-horizontal">
-              <dt>RECORD NUMBER</dt>
-              <dd>730132778</dd>
-              <dt>EFFECTIVE DATE</dt>
-              <dd>12/31/2010</dd>
-              <dt>DOB</dt>
-              <dd>21 JAN 1938</dd>
-              <dt>GENDER</dt>
-              <dd>Male</dd>
-            </dl>
-            <dl class="dl-demo dl-horizontal">
-              <dt>RACE</dt>
-              <dd>Hispanic</dd>
-              <dt>ETHNICITY</dt>
-              <dd>Black</dd>
-              <dt>LANGUAGES</dt>
-              <dd>English, Spanish</dd>
-              <dt>PROVIDERS</dt>
-              <dd>Jonathan Cooper MD</dd>
-            </dl>
-          </div>
-          <div class="time-line">
-            <div class="timeline-title">Patient History Relative to Measures
-            </div>
-          </div>
-          <div class="record-listing ">
-            <div class="circle-icon active-icon">
-              <i class="fa fa-question"></i>
-            </div>
-            <div class="patient-data active">
-              <dl class="dl-record dl-horizontal">
-                <dt>MISSING</dt>
-                <dd>Medication ordered
-                </dd>
+        <div class="col-patient-info">
+          <h1 class="patient-heading"><i class="fa fa-user"></i> Enzo Ferrari</h1>
+          <div class="timeline-entry">
+            <div class="patient-data-list">
+              <dl class="dl-horizontal">
+                <dt>RECORD NUMBER</dt>
+                <dd>697e147f076648275e518e7b3ff41dcd</dd>
+                <dt>EFFECTIVE DATE</dt>
+                <dd>12/31/2010</dd>
+                <dt>DOB</dt>
+                <dd>21 JAN 1938</dd>
+                <dt>GENDER</dt>
+                <dd>Male</dd>
               </dl>
-              <dl class="dl-date dl-horizontal">
-                <dt>DATE </dt>
-                <dd>12-2-2012 - 12-2-2012
-                </dd>
+              <dl class="dl-horizontal">
+                <dt>RACE</dt>
+                <dd>Hispanic</dd>
+                <dt>ETHNICITY</dt>
+                <dd>Black</dd>
+                <dt>LANGUAGES</dt>
+                <dd>English, Spanish</dd>
+                <dt>PROVIDERS</dt>
+                <dd>Jonathan Cooper MD</dd>
               </dl>
             </div>
           </div>
-          <div class="record-listing">
-            <div class="circle-icon">
-              <i class="fa fa-user-md"></i>
-            </div>
+
+          <header class="timeline-entry"><h2>Patient History Relative to Measures</h2></header>
+
+          <div class="timeline-entry during-measurement-period">
+            <div class="circle-icon"><i class="fa fa-question"></i></div>
             <div class="patient-data">
-              <dl class="dl-record dl-horizontal">
-                <dt>ENCOUNTER</dt>
-                <dd>Outpatient                                      
-                </dd>
-              </dl>
-              <dl class="dl-date dl-horizontal">
-                <dt>DATE</dt>
-                <dd>5-25-2012 - 5-25-2012
-                </dd>
-              </dl>
+              <div class="patient-data-list">
+                <dl class="dl-horizontal">
+                  <dt>MISSING</dt>
+                  <dd>Medication ordered</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>DATE</dt>
+                  <dd>12-2-2012 &ndash; 12-2-2012</dd>
+                </dl>
+              </div>
             </div>
           </div>
-          <div class="record-listing">
-            <div class="circle-icon">
-              <i class="fa fa-user-md"></i>
+
+          <div class="timeline-entry">
+            <div class="circle-icon"><i class="fa fa-user-md"></i></div>
+            <div class="patient-data selected">
+              <div class="patient-data-list">
+                <dl class="dl-horizontal">
+                  <dt>ENCOUNTER</dt>
+                  <dd>Outpatient</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>DATE</dt>
+                  <dd>5-25-2012 &ndash; 5-25-2012</dd>
+                </dl>
+              </div>
             </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="circle-icon"><i class="fa fa-user-md"></i></div>
             <div class="patient-data">
-              <dl class="dl-record dl-horizontal">
-                <dt>ENCOUNTER</dt>
-                <dd>Outpatient 
-                </dd>
-                <dt>VITAL SIGNS</dt>
-                <dd>BMI:  23</dd>
-                <dt>MEDICATIONS</dt>
-                <dd>Influenza Vaccine</dd>
-                </dd>
-              </dl>
-              <dl class="dl-date dl-horizontal">
-                <dt>DATE</dt>
-                <dd>3-2-2011 - 3-2-2011
-                </dd>
-              </dl>
+              <div class="patient-data-list">
+                <dl class="dl-horizontal">
+                  <dt>ENCOUNTER</dt>
+                  <dd>Outpatient</dd>
+                  <dt>VITAL SIGNS</dt>
+                  <dd>BMI:  23</dd>
+                  <dt>MEDICATIONS</dt>
+                  <dd>Influenza Vaccine</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>DATE</dt>
+                  <dd>3-2-2011 &ndash; 3-2-2011</dd>
+                </dl>
+              </div>
             </div>
           </div>
-          <div class="record-listing">
-            <div class="circle-icon">
-              <i class="fa fa-stethoscope"></i>
-            </div>
+
+          <div class="timeline-entry">
+            <div class="circle-icon"><i class="fa fa-stethoscope"></i></div>
             <div class="patient-data">
-              <dl class="dl-record dl-horizontal">
-                <dt>CONDITION</dt>
-                <dd>Hypertention
-                </dd>
-              </dl>
-              <dl class="dl-date dl-horizontal">
-                <dt>DATE </dt>
-                <dd>2-2-2010 - 2-2-2010
-                </dd>
-              </dl>
+              <div class="patient-data-list">
+                <dl class="dl-horizontal">
+                  <dt>CONDITION</dt>
+                  <dd>Hypertention</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>DATE</dt>
+                  <dd>2-2-2010 &ndash; 2-2-2010</dd>
+                </dl>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
