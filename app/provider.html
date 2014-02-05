@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <title>popHealth : An Open Source Quality Measure Reference Implementation</title>
+    <link rel="shortcut icon" href="http://pophealth.mitre.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+<body style="zoom: 1;">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header col-lg-4">
+        <a class="logo" href="./dash_files/dash.html" style="max-width: initial"><img alt="Pophealth_logo_small-trans" src="./dash_files/pophealth_logo_small-trans-2626ff60ccdf4a0c848508e400ba8f9d.png"></a>
+      </div>
+      <div class="collapse navbar-collapse in">
+        <ul class="nav navbar-nav pull-left" style="margin-top: 10px">
+          <li class="location">General Hospital <span class="time"> 2012</span></li>
+        </ul>
+         <ul class="nav pull-right">
+          <li class="divider-vertical"></li>
+          <li class="profile">
+            <div class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="http://pophealth.mitre.org/#">
+                <i class="glyphicon glyphicon-user"></i>
+                pophealth
+              </a>
+              <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="User">
+                  <li><a href="http://pophealth.mitre.org/users/edit.520aa790ba2c54e407000002"><i class="glyphicon glyphicon-edit"></i> Edit Account</a></li>
+                  <li><a href="http://pophealth.mitre.org/users/sign_out" data-method="delete" rel="nofollow"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="dropdown-header">Admin</li>
+                  <li><a href="http://pophealth.mitre.org/providers"><i class="glyphicon glyphicon-plus"></i> Providers</a></li>
+                      <li><a href="http://pophealth.mitre.org/admin/patients"><i class="glyphicon glyphicon-eye-open"></i> Patients</a></li>
+                    <li><a href="http://pophealth.mitre.org/admin/users"><i class="glyphicon glyphicon-user"></i> Users</a></li>
+                    <li><a href="http://pophealth.mitre.org/logs/index"><i class="glyphicon glyphicon-list-alt"></i> Logs</a></li> 
+              </ul>
+            </div>
+          </li>
+          <li class="divider-vertical"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="container" class="container" data-view-cid="view282" data-layout-cid="view282">
+    <div data-view-cid="view283">
+      <div class="sidebar" id="filters">
+        <h3>Filters</h3>
+        <div class="panel-group" id="measureSelectors">
+    <div data-view-cid="view291" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3"><div class="panel panel-default" data-model-cid="c63">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt296">
+              Core
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt296" class="panel-collapse collapse" data-model-cid="c63">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view297" data-view-helper="collection" data-model-cid="c63"><div class="checkbox" data-model-cid="c84">
+                <label>
+                  <input type="checkbox" class="individual">
+                  ADHD: Follow-Up Care for Children Prescribed Attention-Deficit/Hyperactivity Disorder (ADHD) Medication
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c138">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Appropriate Testing for Children with Pharyngitis
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c135">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Appropriate Treatment for Children with Upper Respiratory Infection (URI)
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c122">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Childhood Immunization Status
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c89">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Children Who Have Dental Decay or Cavities
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c125">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Chlamydia Screening for Women
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c116">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Closing the referral loop: receipt of specialist report
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c146">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Controlling High Blood Pressure
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c78">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Documentation of Current Medications in the Medical Record
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c64">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Functional Status Assessment for Complex Chronic Conditions
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c92">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Body Mass Index (BMI) Screening and Follow-Up
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c81">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Screening for Clinical Depression and Follow-Up Plan
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c119">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Tobacco Use: Screening and Cessation Intervention
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c67">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Use of Appropriate Medications for Asthma
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c141">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Use of High-Risk Medications in the Elderly
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c132">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Use of Imaging Studies for Low Back Pain
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c97">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Weight Assessment and Counseling for Nutrition and Physical Activity for Children and Adolescents
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c4">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt317">
+              Behavioral Health Adult
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt317" class="panel-collapse collapse" data-model-cid="c4">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view318" data-view-helper="collection" data-model-cid="c4"><div class="checkbox" data-model-cid="c19">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Adult Major Depressive Disorder (MDD): Suicide Risk Assessment
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c8">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Anti-depressant Medication Management
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c13">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Bipolar Disorder and Major Depression: Appraisal for alcohol or chemical substance use
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c16">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Depression Remission at Twelve Months
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c22">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Depression Utilization of the PHQ-9 Tool
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c29">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Initiation and Engagement of Alcohol and Other Drug Dependence Treatment
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c5">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Maternal Depression Screening
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c42">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt328">
+              Behavioral Health General
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt328" class="panel-collapse collapse" data-model-cid="c42">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view329" data-view-helper="collection" data-model-cid="c42"><div class="checkbox" data-model-cid="c43">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Dementia: Cognitive Assessment
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c46">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt333">
+              Behavioral Health Pediatric
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt333" class="panel-collapse collapse" data-model-cid="c46">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view334" data-view-helper="collection" data-model-cid="c46"><div class="checkbox" data-model-cid="c47">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c50">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt338">
+              Cancer
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt338" class="panel-collapse collapse" data-model-cid="c50">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all" checked="">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view339" data-view-helper="collection" data-model-cid="c50"><div class="checkbox" data-model-cid="c57">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Breast Cancer: Hormonal Therapy for Stage IC-IIIC Estrogen Receptor/Progesterone Receptor (ER/PR) Positive Breast Cancer
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c60">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Colon Cancer: Chemotherapy for AJCC Stage III Colon Cancer Patients
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c51">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Oncology: Medical and Radiation – Pain Intensity Quantified
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c54">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Prostate Cancer: Avoidance of Overuse of Bone Scan for Staging Low Risk Prostate Cancer Patients
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c149">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt346">
+              Dental
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt346" class="panel-collapse collapse" data-model-cid="c149">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view347" data-view-helper="collection" data-model-cid="c149"><div class="checkbox" data-model-cid="c150">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Primary Caries Prevention Intervention as Offered by Primary Care Providers, including Dentists
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c159">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt351">
+              Diabetes
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt351" class="panel-collapse collapse" data-model-cid="c159">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view352" data-view-helper="collection" data-model-cid="c159"><div class="checkbox" data-model-cid="c166">
+                <label>
+                  <input type="checkbox" class="individual" checked="">
+                  Diabetes: Foot Exam
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c175">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetes: Hemoglobin A1c Poor Control
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c169">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetes: Low Density Lipoprotein (LDL) Management
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c178">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetes: Urine Protein Screening
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c163">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetic Retinopathy: Communication with the Physician Managing Ongoing Diabetes Care
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c160">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetic Retinopathy: Documentation of Presence or Absence of Macular Edema and Level of Severity of Retinopathy
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c172">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Hemoglobin A1c Test for Pediatric Patients
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c181">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt362">
+              Eye
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt362" class="panel-collapse collapse" data-model-cid="c181">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view363" data-view-helper="collection" data-model-cid="c181"><div class="checkbox" data-model-cid="c182">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Cataracts: 20/40 or Better Visual Acuity within 90 Days Following Cataract Surgery
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c188">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Cataracts: Complications within 30 Days Following Cataract Surgery Requiring Additional Surgical Procedures
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c191">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Diabetes: Eye Exam
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c185">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Primary Open-Angle Glaucoma (POAG): Optic Nerve Evaluation
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c194">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt370">
+              General Practice Adult
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt370" class="panel-collapse collapse" data-model-cid="c194">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view371" data-view-helper="collection" data-model-cid="c194"><div class="checkbox" data-model-cid="c227">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Breast Cancer Screening
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c204">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Cervical Cancer Screening
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c217">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Colorectal Cancer Screening
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c201">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Falls: Screening for Future Fall Risk
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c195">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Hypertension: Improvement in Blood Pressure
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c207">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Pneumonia Vaccination Status for Older Adults
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c198">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening:  Screening for High Blood Pressure and Follow-Up Documented
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c220">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Cholesterol - Fasting Low Density Lipoprotein (LDL-C) Test Performed
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c210">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C)
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c230">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt383">
+              General Practice Pediatric
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt383" class="panel-collapse collapse" data-model-cid="c230">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view384" data-view-helper="collection" data-model-cid="c230"><div class="checkbox" data-model-cid="c231">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Preventive Care and Screening: Influenza Immunization
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c248">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt388">
+              Heart
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt388" class="panel-collapse collapse" data-model-cid="c248">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view389" data-view-helper="collection" data-model-cid="c248"><div class="checkbox" data-model-cid="c249">
+                <label>
+                  <input type="checkbox" class="individual">
+                  ADE Prevention and Monitoring: Warfarin Time in Therapeutic Range
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c263">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Coronary Artery Disease (CAD): Beta-Blocker Therapy—Prior Myocardial Infarction (MI) or Left Ventricular Systolic Dysfunction (LVEF &lt;40%)
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c252">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Heart Failure (HF): Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c255">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Heart Failure (HF): Beta-Blocker Therapy for Left Ventricular Systolic Dysfunction (LVSD)
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c258">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Ischemic Vascular Disease (IVD): Complete Lipid Panel and LDL Control
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c268">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Ischemic Vascular Disease (IVD): Use of Aspirin or Another Antithrombotic
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c234">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt398">
+              HIV
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt398" class="panel-collapse collapse" data-model-cid="c234">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view399" data-view-helper="collection" data-model-cid="c234"><div class="checkbox" data-model-cid="c245">
+                <label>
+                  <input type="checkbox" class="individual">
+                  HIV/AIDS: Medical Visit
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c235">
+                <label>
+                  <input type="checkbox" class="individual">
+                  HIV/AIDS: Pneumocystis jiroveci pneumonia (PCP) prophylaxis
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c242">
+                <label>
+                  <input type="checkbox" class="individual">
+                  HIV/AIDS: RNA Control for Patients with HIV
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c271">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt405">
+              Orthopedics
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt405" class="panel-collapse collapse" data-model-cid="c271">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view406" data-view-helper="collection" data-model-cid="c271"><div class="checkbox" data-model-cid="c272">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Functional Status Assessment for Hip Replacement
+                  
+                </label>
+              </div><div class="checkbox" data-model-cid="c275">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Functional Status Assessment for Knee Replacement
+                  
+                </label>
+              </div></div>
+          </div>
+        </div><div class="panel panel-default" data-model-cid="c278">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt411">
+              Pregnancy
+            </a>
+            <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+          </h4></div>
+        </div><div id="categoryt411" class="panel-collapse collapse" data-model-cid="c278">
+          <div class="panel-body measureItemList">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" class="all">
+                  Select All
+              </label>
+            </div>
+            <div data-view-cid="view412" data-view-helper="collection" data-model-cid="c278"><div class="checkbox" data-model-cid="c279">
+                <label>
+                  <input type="checkbox" class="individual">
+                  Pregnant women that had HBsAg testing
+                  
+                </label>
+              </div></div>
+          </div>
+        </div></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main-heading">
+          <h1 class="titleß"><i class="fa fa-sitemap"></i> VISN 23:<span class="title-description">Midwest Health Care Network</span></h1>
+          <a href="http://pophealth.mitre.org/measures/qrda_cat3.xml" class="export-btn"><i class="glyphicon glyphicon-download-alt"></i> Export</a>
+        </div>
+        <dl class="dl-horizontal col-md-6">
+          <dt>Facilities</dt>
+          <dd><a>3</a><i class="glyphicon glyphicon-chevron-right pull-right"></i></dd>
+          <dt>Divisions</dt>
+          <dd><a>13</a><i class="glyphicon glyphicon-chevron-right pull-right"></i>
+<!--                 <div class="panel panel-default" data-model-cid="d63">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#measureSelectors" href="http://pophealth.mitre.org/#categoryt296">
+                      3
+                    </a>
+                    <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                  </h4>
+                </div>
+              </div>
+              <div id="categoryt296" class="panel-collapse collapse" data-model-cid="d63">
+                <div class="panel-body measureItemList">
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="all">
+                        Select All
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+            </dd>
+        </dl>
+        <dl class="dl-horizontal col-md-6">
+            <dt>Patients</dt>
+            <dd>358,332</dd>
+            <dt>Years reporting</dt>
+            <dd>2012, 2013</dd>
+        </dl>
+        <div data-view-cid="view293" data-view-helper="collection" data-collection-cid="collection284"><div class="category" style="" data-model-cid="c285">
+      <h2 class="category-title">Core</h2>
+      <div class="category-percent">
+        <div class="title-circle">%</div>
+      </div>
+      <div class="category-fraction">Numerator/Denominator</div>
+    </div><div data-view-cid="view418" data-view-helper="collection" data-model-cid="c285"><div data-view-cid="view422" data-view-helper="collection" data-model-cid="c146"><div data-view-cid="view425" data-model-cid="c147" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-66BC02DA4DEE" data-placement="bottom" data-content="Percentage of patients 18-85 years of age who had a diagnosis of hypertension and whose blood pressure was adequately controlled (&lt;140/90mmHg) during the measurement period." data-trigger="hover focus" rel="popover" data-original-title="" title="">Controlling High Blood Pressure</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-66BC02DA4DEE" data-view-cid="view428" data-model-cid="c148"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="50" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">1</div>
+    <div class="denominator">2</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="3.0250000000000004" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 1" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="6.050000000000001" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 2" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect><rect class="denex" width="3.0250000000000004" height="18" y="30" x="6.050000000000001" data-placement="bottom" data-content="Exclusion: 1" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-66BC02DA4DEE/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+</div>
+</div>
+        </div>
+      </div></div></div><div class="category" style="" data-model-cid="c286">
+      <h2 class="category-title">Cancer</h2>
+      <div class="category-percent">
+        <div class="title-circle">%</div>
+      </div>
+      <div class="category-fraction">Numerator/Denominator</div>
+    </div><div data-view-cid="view432" data-view-helper="collection" data-model-cid="c286"><div data-view-cid="view436" data-view-helper="collection" data-model-cid="c57"><div data-view-cid="view439" data-model-cid="c58" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6ABD73E15076" data-placement="bottom" data-content="Percentage of female patients aged 18 years and older with Stage IC through IIIC, ER or PR positive breast cancer who were prescribed tamoxifen or aromatase inhibitor (AI) during the 12-month reporting period" data-trigger="hover focus" rel="popover" data-original-title="" title="">Breast Cancer: Hormonal Therapy for Stage IC-IIIC Estrogen Receptor/Progesterone Receptor (ER/PR) Positive Breast Cancer</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-6ABD73E15076" data-view-cid="view442" data-model-cid="c59"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="0" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">0</div>
+    <div class="denominator">0</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="0" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="0" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6ABD73E15076/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+</div>
+</div>
+        </div>
+      </div></div><div data-view-cid="view446" data-view-helper="collection" data-model-cid="c60"><div data-view-cid="view449" data-model-cid="c61" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6B81E6E455A5" data-placement="bottom" data-content="Percentage of patients aged 18 through 80 years with AJCC Stage III colon cancer who are referred for adjuvant chemotherapy, prescribed adjuvant chemotherapy, or have previously received adjuvant chemotherapy within the 12-month reporting period." data-trigger="hover focus" rel="popover" data-original-title="" title="">Colon Cancer: Chemotherapy for AJCC Stage III Colon Cancer Patients</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-6B81E6E455A5" data-view-cid="view452" data-model-cid="c62"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="0" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">0</div>
+    <div class="denominator">0</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="0" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="0" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6B81E6E455A5/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+</div>
+</div>
+        </div>
+      </div></div><div data-view-cid="view456" data-view-helper="collection" data-model-cid="c51"><div data-view-cid="view459" data-model-cid="c52" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-62AF4C523143" data-placement="bottom" data-content="Percentage of patient visits, regardless of patient age, with a diagnosis of cancer currently receiving chemotherapy or radiation therapy in which pain intensity is quantified" data-trigger="hover focus" rel="popover" data-original-title="" title="">Oncology: Medical and Radiation – Pain Intensity Quantified</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-62AF4C523143" data-view-cid="view462" data-model-cid="c53"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="0" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">0</div>
+    <div class="denominator">0</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="0" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="0" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-62AF4C523143/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+</div>
+</div>
+        </div>
+      </div></div><div data-view-cid="view466" data-view-helper="collection" data-model-cid="c54"><div data-view-cid="view469" data-model-cid="c55" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6696AF6E477F" data-placement="bottom" data-content="Percentage of patients, regardless of age, with a diagnosis of prostate cancer at low risk of recurrence receiving interstitial prostate brachytherapy, OR external beam radiotherapy to the prostate, OR radical prostatectomy, OR cryotherapy who did not have a bone scan performed at any time since diagnosis of prostate cancer" data-trigger="hover focus" rel="popover" data-original-title="" title="">Prostate Cancer: Avoidance of Overuse of Bone Scan for Staging Low Risk Prostate Cancer Patients</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-6696AF6E477F" data-view-cid="view472" data-model-cid="c56"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="0" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">0</div>
+    <div class="denominator">0</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="0" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="0" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-6696AF6E477F/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+</div>
+</div>
+        </div>
+      </div></div></div><div class="category" style="" data-model-cid="c287">
+      <h2 class="category-title">Diabetes</h2>
+      <div class="category-percent">
+        <div class="title-circle">%</div>
+      </div>
+      <div class="category-fraction">Numerator/Denominator</div>
+    </div><div data-view-cid="view476" data-view-helper="collection" data-model-cid="c287"><div data-view-cid="view480" data-view-helper="collection" data-model-cid="c166"><div data-view-cid="view483" data-model-cid="c167" style="opacity: 1; display: block;">
+        <div class="measure">
+          <div class="measure-title" data-measure-sub="">
+            
+              <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-5D11ABE068EB" data-placement="bottom" data-content="Percentage of patients aged 18-75 years of age with diabetes who had a foot exam during the measurement period." data-trigger="hover focus" rel="popover" data-original-title="" title="">Diabetes: Foot Exam</a>
+            
+          </div>
+          <div class="measure-subtitle">
+            
+          </div>
+          <div id="40280381-3D61-56A7-013E-5D11ABE068EB" data-view-cid="view486" data-model-cid="c168"><div class="percent-listing">
+  <div style="display: inline; width: 80px; height: 80px;"><canvas width="80" height="80"></canvas><input type="text" value="0" class="dial" data-readonly="true" data-width="80" data-height="80" data-thickness=".1" data-fgcolor="#4B979D" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+</div>
+
+<div class="row-remainder">
+  <div class="fraction-listing pull-left">
+    <div class="numerator">0</div>
+    <div class="denominator">0</div>
+  </div>
+
+  <div class="pop-chart pull-left"><svg><g><rect class="numer" width="0" height="18" y="2" x="2" data-placement="top" data-content="Numerator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g><g class="denom"><rect class="denom" width="0" height="18" y="30" x="2" data-placement="bottom" data-content="Denominator: 0" data-trigger="hover focus" data-container="body" data-original-title="" title=""></rect></g></svg></div>
+
+  <a href="http://pophealth.mitre.org/#measures/40280381-3D61-56A7-013E-5D11ABE068EB/patient_results" class="patient-btn pull-right">
+    <i class="glyphicon glyphicon-user"></i> Patients
+  </a>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <script src="./dash_files/application-96b84b6b7345938d2ed202e014b95cdb.js" type="text/javascript"></script>
+  <script>
+  // PopHealth object created in application.js (specifically, within router)
+  PopHealth.categories = [{"measures":[{"id":"8A4D92B2-3927-D7AE-0139-366C49F93102","name":"Maternal Depression Screening","description":"The percentage of children who turned 6 months of age during the measurement year, who had a face-to-face visit between the clinician and the child during child\u2019s first 6 months, and who had  a maternal depression screening for the mother at least once between 0 and 6 months of life.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-7AF612436402","name":"Anti-depressant Medication Management","description":"Percentage of patients 18 years of age and older who were diagnosed with major depression and treated with antidepressant medication, and who remained on antidepressant medication treatment. Two rates are reported. \na. Percentage of patients who remained on an antidepressant medication for at least 84 days (12 weeks). \nb. Percentage of patients who remained on an antidepressant medication for at least 180 days (6 months).","subs":[{"sub_id":"a","short_subtitle":"84 days"},{"sub_id":"b","short_subtitle":"180 days"}],"sub_ids":["a","b"]},{"id":"40280381-3D61-56A7-013E-658BC7A23C9C","name":"Bipolar Disorder and Major Depression: Appraisal for alcohol or chemical substance use","description":"Percentage of patients with depression or bipolar disorder with evidence of an initial assessment that includes an appraisal for alcohol or chemical substance use.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-8698AB2E1E30","name":"Depression Remission at Twelve Months","description":"Adult patients age 18 and older with major depression or dysthymia and an initial PHQ-9 score > 9 who demonstrate remission at twelve months defined as PHQ-9 score less than 5. This measure applies to both patients with newly diagnosed and existing depression whose current PHQ-9 score indicates a need for treatment","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-7BC533A071D3","name":"Adult Major Depressive Disorder (MDD): Suicide Risk Assessment","description":"Percentage of patients aged 18 years and older with a diagnosis of major depressive disorder (MDD) with a suicide risk assessment completed during the visit in which a new diagnosis or recurrent episode was identified","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-8A3638093344","name":"Depression Utilization of the PHQ-9 Tool","description":"Adult patients age 18 and older with the diagnosis of major depression or dysthymia who have a PHQ-9 tool administered at least once during a 4-month period in which there was a qualifying visit.","subs":[{"sub_id":"a","short_subtitle":"Sep-Dec"},{"sub_id":"b","short_subtitle":"May-Aug"},{"sub_id":"c","short_subtitle":"Jan-Apr"}],"sub_ids":["a","b","c"]},{"id":"40280381-3D61-56A7-013E-5B2AA3493C42","name":"Initiation and Engagement of Alcohol and Other Drug Dependence Treatment","description":"Percentage of patients 13 years of age and older with a new episode of alcohol and other drug (AOD) dependence who received the following. Two rates are reported.\na. Percentage of patients who initiated treatment within 14 days of the diagnosis.\nb. Percentage of patients who initiated treatment and who had two or more additional services with an AOD diagnosis within 30 days of the initiation visit.","subs":[{"sub_id":"a","short_subtitle":"Treatment"},{"sub_id":"b","short_subtitle":"Treatment w/ AOD"},{"sub_id":"c","short_subtitle":"Treatment, RS1: 13-17"},{"sub_id":"d","short_subtitle":"Treatment, RS2: >=18"},{"sub_id":"e","short_subtitle":"Treatment w/ AOD, RS1: 13-17"},{"sub_id":"f","short_subtitle":"Treatment w AOD, RS2: >=18"}],"sub_ids":["a","b","c","d","e","f"]}],"category":"Behavioral Health Adult"},{"measures":[{"id":"40280381-3D61-56A7-013E-57FA83AF36FA","name":"Dementia: Cognitive Assessment","description":"Percentage of patients, regardless of age, with a diagnosis of dementia for whom an assessment of cognition is performed and the results reviewed at least once within a 12 month period","subs":[{}],"sub_ids":[]}],"category":"Behavioral Health General"},{"measures":[{"id":"40280381-3D61-56A7-013E-5D9034CF7065","name":"Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment","description":"Percentage of patient visits for those patients aged 6 through 17 years with a\ndiagnosis of major depressive disorder with an assessment for suicide risk","subs":[{}],"sub_ids":[]}],"category":"Behavioral Health Pediatric"},{"measures":[{"id":"40280381-3D61-56A7-013E-62AF4C523143","name":"Oncology: Medical and Radiation \u2013 Pain Intensity Quantified","description":"Percentage of patient visits, regardless of patient age, with a diagnosis of cancer currently receiving chemotherapy or radiation therapy in which pain intensity is quantified","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-6696AF6E477F","name":"Prostate Cancer: Avoidance of Overuse of Bone Scan for Staging Low Risk Prostate Cancer Patients","description":"Percentage of patients, regardless of age, with a diagnosis of prostate cancer at low risk of recurrence receiving interstitial prostate brachytherapy, OR external beam radiotherapy to the prostate, OR radical prostatectomy, OR cryotherapy who did not have a bone scan performed at any time since diagnosis of prostate cancer","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-6ABD73E15076","name":"Breast Cancer: Hormonal Therapy for Stage IC-IIIC Estrogen Receptor/Progesterone Receptor (ER/PR) Positive Breast Cancer","description":"Percentage of female patients aged 18 years and older with Stage IC through IIIC, ER or PR positive breast cancer who were prescribed tamoxifen or aromatase inhibitor (AI) during the 12-month reporting period","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-6B81E6E455A5","name":"Colon Cancer: Chemotherapy for AJCC Stage III Colon Cancer Patients","description":"Percentage of patients aged 18 through 80 years with AJCC Stage III colon cancer who are referred for adjuvant chemotherapy, prescribed adjuvant chemotherapy, or have previously received adjuvant chemotherapy within the 12-month reporting period.","subs":[{}],"sub_ids":[]}],"category":"Cancer"},{"measures":[{"id":"40280381-3E93-D1AF-013E-A49CA9F94008","name":"Functional Status Assessment for Complex Chronic Conditions","description":"Percentage of patients aged 65 years and older with heart failure who completed initial and follow-up patient-reported functional status assessments","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-6649110743CE","name":"Use of Appropriate Medications for Asthma","description":"Percentage of patients 5-64 years of age who were identified as having persistent asthma and were appropriately prescribed medication during the measurement period.","subs":[{"sub_id":"a","short_subtitle":"5-64"},{"sub_id":"b","short_subtitle":"RS1: 5-11"},{"sub_id":"c","short_subtitle":"RS2: 12-18"},{"sub_id":"d","short_subtitle":"RS3: 19-50"},{"sub_id":"e","short_subtitle":"RS4: 51-64"}],"sub_ids":["a","b","c","d","e"]},{"id":"40280381-3E93-D1AF-013E-A36090B72CC8","name":"Documentation of Current Medications in the Medical Record","description":"Percentage of visits for patients aged 18 years and older for which the eligible professional attests to documenting a list of current medications using all immediate resources available on the date of the encounter.  This list must include ALL known prescriptions, over-the-counters, herbals, and vitamin/mineral/dietary (nutritional) supplements AND must contain the medications' name, dosage, frequency and route of administration.","subs":[{}],"sub_ids":[]},{"id":"40280381-3E93-D1AF-013E-9F642782222A","name":"Preventive Care and Screening: Screening for Clinical Depression and Follow-Up Plan","description":"Percentage of patients aged 12 years and older screened for clinical depression on the date of the encounter using an age appropriate standardized depression screening tool AND if positive, a follow-up plan is documented on the date of the positive screen.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-62E052273699","name":"ADHD: Follow-Up Care for Children Prescribed Attention-Deficit/Hyperactivity Disorder (ADHD) Medication","description":"Percentage of children 6-12 years of age and newly dispensed a medication for attention-deficit/hyperactivity disorder (ADHD) who had appropriate follow-up care.  Two rates are reported.  \na. Percentage of children who had one follow-up visit with a practitioner with prescribing authority during the 30-Day Initiation Phase.\nb. Percentage of children who remained on ADHD medication for at least 210 days and who, in addition to the visit in the Initiation Phase, had at least two additional follow-up visits with a practitioner within 270 days (9 months) after the Initiation Phase ended.","subs":[{"sub_id":"a","short_subtitle":"Visit within 30 days"},{"sub_id":"b","short_subtitle":"Visit with 2+ followups"}],"sub_ids":["a","b"]},{"id":"40280381-3D61-56A7-013E-8F2F5AD054E2","name":"Children Who Have Dental Decay or Cavities","description":"Percentage of children, age 0-20 years, who have had tooth decay or cavities during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3E93-D1AF-013E-D6E2B772150D","name":"Preventive Care and Screening: Body Mass Index (BMI) Screening and Follow-Up","description":"Percentage of patients aged 18 years and older with a documented BMI during the encounter or during the previous six months, AND when the BMI is outside of normal parameters, a follow-up plan is documented during the encounter or during the previous six months of the encounter \r\n\r\nNormal Parameters:       Age 65 years and older BMI => 23 and < 30 \r\n\r\n                                    Age 18 \u2013 64 years BMI => 18.5 and < 25","subs":[{"sub_id":"a","short_subtitle":"65+"},{"sub_id":"b","short_subtitle":"18-64"}],"sub_ids":["a","b"]},{"id":"40280381-3D61-56A7-013E-5D530FD26D47","name":"Weight Assessment and Counseling for Nutrition and Physical Activity for Children and Adolescents","description":"Percentage of patients 3-17 years of age who had an outpatient visit with a Primary Care Physician (PCP) or Obstetrician/Gynecologist (OB/GYN) and who had evidence of the following during the measurement period. Three rates are reported.\n\n - Percentage of patients with height, weight, and body mass index (BMI) percentile documentation\n - Percentage of patients with counseling for nutrition\n - Percentage of patients with counseling for physical activity","subs":[{"sub_id":"a","short_subtitle":"BMI Recorded"},{"sub_id":"b","short_subtitle":"Nutrition Counseling"},{"sub_id":"c","short_subtitle":"Physical Activity Counseling"},{"sub_id":"d","short_subtitle":"BMI Recorded, RS1: 3-11"},{"sub_id":"e","short_subtitle":"BMI Recorded, RS2: 12-17"},{"sub_id":"f","short_subtitle":"Nutrition Counseling, RS1: 3-11"},{"sub_id":"g","short_subtitle":"Nutrition Counseling, RS2: 12-17"},{"sub_id":"h","short_subtitle":"Physical Activity Counseling, RS1: 3-11"},{"sub_id":"i","short_subtitle":"Physical Activity Counseling, RS2: 12-17"}],"sub_ids":["a","b","c","d","e","f","g","h","i"]},{"id":"40280381-3D61-56A7-013E-7AA509DE6258","name":"Closing the referral loop: receipt of specialist report","description":"Percentage of patients with referrals, regardless of age, for which the referring provider receives a report from the provider to whom the patient was referred.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5CD94A4D64FA","name":"Preventive Care and Screening: Tobacco Use: Screening and Cessation Intervention","description":"Percentage of patients aged 18 years and older who were screened for tobacco use one or more times within 24 months AND who received cessation counseling intervention if identified as a tobacco user","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-6224E2AC25F3","name":"Childhood Immunization Status","description":"Percentage of children 2 years of age who had four diphtheria, tetanus and acellular pertussis (DTaP); three polio (IPV), one measles, mumps and rubella (MMR); three H influenza type B (HiB); three hepatitis B (Hep B); one chicken pox (VZV); four pneumococcal conjugate (PCV); one hepatitis A (Hep A); two or three rotavirus (RV); and two influenza (flu) vaccines by their second birthday.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5D4001866C09","name":"Chlamydia Screening for Women","description":"Percentage of women 16-24 years of age who were identified as sexually active and who had at least one test for chlamydia during the measurement period.","subs":[{"sub_id":"a","short_subtitle":"16-24"},{"sub_id":"b","short_subtitle":"RS1: 16-20"},{"sub_id":"c","short_subtitle":"RS2: 21-24"}],"sub_ids":["a","b","c"]},{"id":"40280381-3D61-56A7-013E-62790FE42CA1","name":"Use of Imaging Studies for Low Back Pain","description":"Percentage of patients 18-50 years of age with a diagnosis of low back pain who did not have an imaging study (plain X-ray, MRI, CT scan) within 28 days of the diagnosis.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5CC8AA6D6290","name":"Appropriate Treatment for Children with Upper Respiratory Infection (URI)","description":"Percentage of children 3 months-18 years of age who were diagnosed with upper respiratory infection (URI) and were not dispensed an antibiotic prescription on or three days after the episode.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5D1EF9B76A48","name":"Appropriate Testing for Children with Pharyngitis","description":"Percentage of children 2-18 years of age who were diagnosed with pharyngitis, ordered an antibiotic and received a group A streptococcus (strep) test for the episode.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-65C9C3043E54","name":"Use of High-Risk Medications in the Elderly","description":"Percentage of patients 66 years of age and older who were ordered high-risk medications. Two rates are reported.\na. Percentage of patients who were ordered at least one high-risk medication. \nb. Percentage of patients who were ordered at least two different high-risk medications.","subs":[{"sub_id":"a","short_subtitle":"1+ High-Risk Medications"},{"sub_id":"b","short_subtitle":"2+ High-Risk Medications"}],"sub_ids":["a","b"]},{"id":"40280381-3D61-56A7-013E-66BC02DA4DEE","name":"Controlling High Blood Pressure","description":"Percentage of patients 18-85 years of age who had a diagnosis of hypertension and whose blood pressure was adequately controlled (<140/90mmHg) during the measurement period.","subs":[{}],"sub_ids":[]}],"category":"Core"},{"measures":[{"id":"40280381-3D61-56A7-013E-8ACBFE873BCB","name":"Primary Caries Prevention Intervention as Offered by Primary Care Providers, including Dentists","description":"Percentage of children, age 0-20 years, who received a fluoride varnish application during the measurement period.","subs":[{"sub_id":"a","short_subtitle":"0-20"},{"sub_id":"b","short_subtitle":"RS1: <= 5"},{"sub_id":"c","short_subtitle":"RS2: 6-12"},{"sub_id":"d","short_subtitle":"RS3: 13-20"}],"sub_ids":["a","b","c","d"]}],"category":"Dental"},{"measures":[{"id":"40280381-3D61-56A7-013E-57FE7ED437D7","name":"Diabetic Retinopathy: Documentation of Presence or Absence of Macular Edema and Level of Severity of Retinopathy","description":"Percentage of patients aged 18 years and older with a diagnosis of diabetic retinopathy who had a dilated macular or fundus exam performed which included documentation of the level of severity of retinopathy and the presence or absence of macular edema during one or more office visits within 12 months","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-66B2CA294C47","name":"Diabetic Retinopathy: Communication with the Physician Managing Ongoing Diabetes Care","description":"Percentage of patients aged 18 years and older with a diagnosis of diabetic retinopathy who had a dilated macular or fundus exam performed with documented communication to the physician who manages the ongoing care of the patient with diabetes mellitus regarding the findings of the macular or fundus exam at least once within 12 months","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5D11ABE068EB","name":"Diabetes: Foot Exam","description":"Percentage of patients aged 18-75 years of age with diabetes who had a foot exam during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-5D5B19BF6DFB","name":"Diabetes: Low Density Lipoprotein (LDL) Management","description":"Percentage of patients 18\u201375 years of age with diabetes whose LDL-C was adequately controlled (<100 mg/dL) during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-61EF9907211D","name":"Hemoglobin A1c Test for Pediatric Patients","description":"Percentage of patients 5-17 years of age with diabetes with an HbA1c test during the measurement period","subs":[{}],"sub_ids":[]},{"id":"8A4D92B2-397A-48D2-0139-9CD4937E6C86","name":"Diabetes: Hemoglobin A1c Poor Control","description":"Percentage of patients 18-75 years of age with diabetes who had hemoglobin A1c > 9.0% during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-62ABF5662FFF","name":"Diabetes: Urine Protein Screening","description":"The percentage of patients 18-75 years of age with diabetes who had a nephropathy screening test or evidence of nephropathy during the measurement period.","subs":[{}],"sub_ids":[]}],"category":"Diabetes"},{"measures":[{"id":"40280381-3D61-56A7-013E-846AAE0F021F","name":"Cataracts: 20/40 or Better Visual Acuity within 90 Days Following Cataract Surgery","description":"Percentage of patients aged 18 years and older with a diagnosis of uncomplicated cataract who had cataract surgery and no significant ocular conditions impacting the visual outcome of surgery and had best-corrected visual acuity of 20/40 or better (distance or near) achieved within 90 days following the cataract surgery","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-425AD8E9179C","name":"Primary Open-Angle Glaucoma (POAG): Optic Nerve Evaluation","description":"Percentage of patients aged 18 years and older with a diagnosis of primary open-angle glaucoma (POAG) who have an optic nerve head evaluation during one or more office visits within 12 months","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-66AE98364ADE","name":"Cataracts: Complications within 30 Days Following Cataract Surgery Requiring Additional Surgical Procedures","description":"Percentage of patients aged 18 years and older with a diagnosis of uncomplicated cataract who had cataract surgery and had any of a specified list of surgical procedures in the 30 days following cataract surgery which would indicate the occurrence of any of the following major complications: retained nuclear fragments, endophthalmitis, dislocated or wrong power IOL, retinal detachment, or wound dehiscence","subs":[{}],"sub_ids":[]},{"id":"8A4D92B2-39CA-AF4B-0139-D472724E0C46","name":"Diabetes: Eye Exam","description":"Percentage of patients 18-75 years of age with diabetes who had a retinal or dilated eye exam by an eye care professional during the measurement period or a negative retinal exam (no evidence of retinopathy) in the 12 months prior to the measurement period","subs":[{}],"sub_ids":[]}],"category":"Eye"},{"measures":[{"id":"40280381-3E93-D1AF-013E-A4CAFFEF4684","name":"Hypertension: Improvement in Blood Pressure","description":"Percentage of patients aged 18-85 years of age with a diagnosis of hypertension whose blood pressure improved during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3E93-D1AF-013E-AF14FC6B5642","name":"Preventive Care and Screening:  Screening for High Blood Pressure and Follow-Up Documented","description":"Percentage of patients aged 18 years and older seen during the reporting period who were screened for high blood pressure AND a recommended follow-up plan is documented based on the current blood pressure (BP) reading as indicated","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-62684F542B66","name":"Falls: Screening for Future Fall Risk","description":"Percentage of patients 65 years of age and older who were screened for future fall risk during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-669CBC034836","name":"Cervical Cancer Screening","description":"Percentage of women 21-64 years of age, who received one or more Pap tests to screen for cervical cancer.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-66A79D4A4A23","name":"Pneumonia Vaccination Status for Older Adults","description":"Percentage of patients 65 years of age and older who have ever received a pneumococcal vaccine.","subs":[{}],"sub_ids":[]},{"id":"40280381-3E93-D1AF-013E-B297A0A15BB5","name":"Preventive Care and Screening: Risk-Stratified Cholesterol \u2013 Fasting Low Density Lipoprotein (LDL-C)","description":"Percentage of patients aged 20 through 79 years who had a fasting LDL-C test performed and whose risk-stratified fasting LDL-C is at or below the recommended LDL-C goal.","subs":[{"sub_id":"a","short_subtitle":"LDL-C <100 mg/dL"},{"sub_id":"b","short_subtitle":"LDL-C <130 mg/dL"},{"sub_id":"c","short_subtitle":"LDL-C <160 mg/dL"}],"sub_ids":["a","b","c"]},{"id":"40280381-3D61-56A7-013E-5BFF718B5A57","name":"Colorectal Cancer Screening","description":"Percentage of adults 50-75 years of age who had appropriate screening for colorectal cancer.","subs":[{}],"sub_ids":[]},{"id":"40280381-3E93-D1AF-013E-B277EE0A5A46","name":"Preventive Care and Screening: Cholesterol - Fasting Low Density Lipoprotein (LDL-C) Test Performed","description":"Percentage of patients aged 20 through 79 years whose risk factors have been assessed and a fasting LDL-C test has been performed.","subs":[{"sub_id":"a","short_subtitle":"High Risk"},{"sub_id":"b","short_subtitle":"Moderate Risk"},{"sub_id":"c","short_subtitle":"Low Risk"}],"sub_ids":["a","b","c"]},{"id":"40280381-3D61-56A7-013E-66A5A5834990","name":"Breast Cancer Screening","description":"Percentage of women 40\u201369 years of age who had a mammogram to screen for breast cancer.","subs":[{}],"sub_ids":[]}],"category":"General Practice Adult"},{"measures":[{"id":"40280381-3D61-56A7-013E-57F49972361A","name":"Preventive Care and Screening: Influenza Immunization","description":"Percentage of patients aged 6 months and older seen for a visit between October 1 and March 31 who received an influenza immunization OR who reported previous receipt of an influenza immunization","subs":[{}],"sub_ids":[]}],"category":"General Practice Pediatric"},{"measures":[{"id":"40280381-3E93-D1AF-013E-A49F8F204114","name":"HIV/AIDS: Pneumocystis jiroveci pneumonia (PCP) prophylaxis","description":"Percentage of patients aged 6 weeks and older with a diagnosis of HIV/AIDS who were prescribed Pneumocystis jiroveci pneumonia (PCP) prophylaxis","subs":[{"sub_id":"a","short_subtitle":"<=3 Mon. of CD4 <200 cells/mm3"},{"sub_id":"b","short_subtitle":"At Diagnosis of HIV"},{"sub_id":"c","short_subtitle":"<=3 Mon. of CD4 <500 cells/mm3 or CD4 <15%"}],"sub_ids":["a","b","c"]},{"id":"40280381-3D61-56A7-013E-8AB774D0398A","name":"HIV/AIDS: RNA Control for Patients with HIV","description":"Percentage of patients aged 13 years and older with a diagnosis of HIV/AIDS, with at least two visits during the measurement year, with at least 90 days between each visit, whose most recent HIV RNA level is <200 copies/mL.","subs":[{}],"sub_ids":[]},{"id":"8A4D92B2-3A00-2A25-013A-407C78A12C20","name":"HIV/AIDS: Medical Visit","description":"Percentage of patients, regardless of age, with a diagnosis of HIV/AIDS with at least two medical visits during the measurement year with a minimum of 90 days between each visit","subs":[{}],"sub_ids":[]}],"category":"HIV"},{"measures":[{"id":"40280381-3E93-D1AF-013E-9E3E037E08D6","name":"ADE Prevention and Monitoring: Warfarin Time in Therapeutic Range","description":"Average percentage of time in which patients aged 18 and older with atrial fibrillation who are on chronic warfarin therapy have International Normalized Ratio (INR) test results within the therapeutic range (i.e., TTR) during the measurement period.","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-62367B892985","name":"Heart Failure (HF): Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)","description":"Percentage of patients aged 18 years and older with a diagnosis of heart failure (HF) with a current or prior left ventricular ejection fraction (LVEF) < 40% who were prescribed ACE inhibitor or ARB therapy either within a 12 month period when seen in the outpatient setting OR at each hospital discharge","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-666032B244F7","name":"Heart Failure (HF): Beta-Blocker Therapy for Left Ventricular Systolic Dysfunction (LVSD)","description":"Percentage of patients aged 18 years and older with a diagnosis of heart failure (HF) with a current or prior left ventricular ejection fraction (LVEF) < 40% who were prescribed beta-blocker therapy either within a 12 month period when seen in the outpatient setting OR at each hospital discharge","subs":[{}],"sub_ids":[]},{"id":"40280381-3F77-75C9-013F-7B481CEA02FD","name":"Ischemic Vascular Disease (IVD): Complete Lipid Panel and LDL Control","description":"Percentage of patients 18 years of age and older who were discharged alive for acute myocardial infarction (AMI), coronary artery bypass graft (CABG) or percutaneous coronary interventions (PCI) in the 12 months prior to the measurement period, or who had an active diagnosis of ischemic vascular disease (IVD) during the measurement period, and who had a complete lipid profile performed during the measurement period and whose LDL-C was adequately controlled (< 100 mg/dL).","subs":[{"sub_id":"a","short_subtitle":"Complete Lipid Profile"},{"sub_id":"b","short_subtitle":"Most Recent LDL-C <100 mg/dL"}],"sub_ids":["a","b"]},{"id":"40280381-3D61-56A7-013E-6B885A105724","name":"Coronary Artery Disease (CAD): Beta-Blocker Therapy\u2014Prior Myocardial Infarction (MI) or Left Ventricular Systolic Dysfunction (LVEF <40%)","description":"Percentage of patients aged 18 years and older with a diagnosis of coronary artery disease seen within a 12 month period who also have a prior MI or a current or prior LVEF <40% who were prescribed beta-blocker therapy","subs":[{"sub_id":"a","short_subtitle":"LVSD"},{"sub_id":"b","short_subtitle":"prior MI"}],"sub_ids":["a","b"]},{"id":"8A4D92B2-397A-48D2-0139-C626C0935307","name":"Ischemic Vascular Disease (IVD): Use of Aspirin or Another Antithrombotic","description":"Percentage of patients 18 years of age and older who were discharged alive for acute myocardial infarction (AMI), coronary artery bypass graft (CABG) or percutaneous coronary interventions (PCI) in the 12 months prior to the measurement period, or who had an active diagnosis of ischemic vascular disease (IVD) during the measurement period, and who had documentation of use of aspirin or another antithrombotic during the measurement period.","subs":[{}],"sub_ids":[]}],"category":"Heart"},{"measures":[{"id":"40280381-3D61-56A7-013E-8B6A8ACA4A39","name":"Functional Status Assessment for Hip Replacement","description":"Percentage of patients aged 18 years and older with primary total hip arthroplasty (THA) who completed baseline and follow-up (patient-reported) functional status assessments","subs":[{}],"sub_ids":[]},{"id":"40280381-3D61-56A7-013E-8B8F87F64D63","name":"Functional Status Assessment for Knee Replacement","description":"Percentage of patients aged 18 years and older with primary total knee arthroplasty (TKA) who completed  baseline and follow-up (patient-reported) functional status assessments.","subs":[{}],"sub_ids":[]}],"category":"Orthopedics"},{"measures":[{"id":"40280381-3D61-56A7-013E-7B520EB06BF3","name":"Pregnant women that had HBsAg testing","description":"This measure identifies pregnant women who had a HBsAg (hepatitis B) test during their pregnancy.","subs":[{}],"sub_ids":[]}],"category":"Pregnancy"}];
+  PopHealth.patientCount = 37;
+  PopHealth.currentUser = new Thorax.Models.User({"_id":"520aa790ba2c54e407000002","admin":true,"agree_license":true,"approved":true,"company":"MITRE","company_url":"http://www.mitre.org","disabled":null,"effective_date":1356912000,"email":"pophealth-list@lists.mitre.org","first_name":"pophealth","last_name":"pophealth","npi":"","preferences":{"selected_measure_ids":["40280381-3D61-56A7-013E-5D11ABE068EB","40280381-3D61-56A7-013E-66BC02DA4DEE","40280381-3D61-56A7-013E-6ABD73E15076","40280381-3D61-56A7-013E-6B81E6E455A5","40280381-3D61-56A7-013E-62AF4C523143","40280381-3D61-56A7-013E-6696AF6E477F"]},"registry_id":"","registry_name":"","staff_role":false,"tin":"","username":"pophealth"});
+  new PopHealth.Router();
+  Backbone.history.start();
+</script>
+
+
+
+</body>
+</html>
