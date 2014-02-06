@@ -98,6 +98,12 @@ h4 {
 
 // Additions to Bootstrap classes
 
+.dl-horizontal {
+  dt{
+    text-transform: uppercase;
+  }
+}
+
 .text-muted {
   font-style: italic;
 }
@@ -157,14 +163,16 @@ h4 {
 .main {
   .make-xs-column(9);
   .main-heading {
-    .row;
     .title {
-      .make-xs-column(3);
+      .make-xs-column(10);
     }
     .export-btn {
       .btn;
       .btn-primary;
       .pull-right;
+    }
+    .dl-horizontal {
+      .row;
     }
   }
 }
