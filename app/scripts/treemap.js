@@ -23,20 +23,20 @@
 
   depth = {
     "0": "",
-    "1": "VISN ",
+    "1": "Region",
     "2": "Facilty ",
     "3": ""
   };
 
   heightScale = d3.scale.linear().range([0, height / 3, height / 2]);
 
-  svg = d3.select("#visn").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).style("overflow", "visible;").append("g").attr("transform", "translate(0," + margin.top + ")");
+  svg = d3.select("#region").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).style("overflow", "visible;").append("g").attr("transform", "translate(0," + margin.top + ")");
 
   diagonal = d3.svg.diagonal().projection(function(d) {
     return [d.x, d.y];
   });
 
-  d3.json("VISNs.json", function(json) {
+  d3.json("REGIONs.json", function(json) {
     var collapse;
     root = json;
     root.x0 = width / 2;
