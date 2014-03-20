@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <title>popHealth : An Open Source Quality Measure Reference Implementation</title>
+    <link rel="shortcut icon" href="http://pophealth.mitre.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+<body>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header col-lg-4">
+      <a class="logo" href="./dash_files/dash.html" style="max-width: initial"><img alt="Pophealth_logo_small-trans" src="./dash_files/pophealth_logo_small-trans-2626ff60ccdf4a0c848508e400ba8f9d.png"></a>
+    </div>
+    <div class="collapse navbar-collapse in">
+      <ul class="nav navbar-nav pull-left" style="margin-top: 10px">
+        <li class="location">General Hospital <span class="time"> 2012</span></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li class="divider-vertical"></li>
+        <li class="profile">
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="http://pophealth.mitre.org/#">
+              <i class="glyphicon glyphicon-user"></i>
+              pophealth
+            </a>
+            <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="User">
+                <li><a href="http://pophealth.mitre.org/users/edit.520aa790ba2c54e407000002"><i class="glyphicon glyphicon-edit"></i> Edit Account</a></li>
+                <li><a href="http://pophealth.mitre.org/users/sign_out" data-method="delete" rel="nofollow"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                <li class="divider"></li>
+                <li role="presentation" class="dropdown-header">Admin</li>
+                <li><a href="http://pophealth.mitre.org/providers"><i class="glyphicon glyphicon-plus"></i> Providers</a></li>
+                    <li><a href="http://pophealth.mitre.org/admin/patients"><i class="glyphicon glyphicon-eye-open"></i> Patients</a></li>
+                  <li><a href="http://pophealth.mitre.org/admin/users"><i class="glyphicon glyphicon-user"></i> Users</a></li>
+                  <li><a href="http://pophealth.mitre.org/logs/index"><i class="glyphicon glyphicon-list-alt"></i> Logs</a></li> 
+            </ul>
+          </div>
+        </li>
+        <li class="divider-vertical"></li>
+      </ul>
+    </div>
+  </div>
+  <div id="container" class="container">
+    <div class="patient-loader col-md-offset-3 col-md-6">
+      <div class="main-heading row">
+        <h1 class="title"><i class="fa fa-users"></i> Patients</h1>
+      </div>
+      <div class="category">
+        <h2 class="category-title">Category</h2>
+        <div class="category-number">Number</div>
+      </div>
+      <div class="loader">
+        <div class="loader-title">Patients Loaded:</div>
+        <div class="loader-number">37</div>
+        <a class="btn-primary btn pull-right"><i class="fa fa-times fa-fw"></i></i>Delete</a>
+      </div>
+      <div class="loader">
+        <div class="loader-title">Query Cache:</div>
+        <div class="loader-number">52</div>
+        <a class="btn-primary btn pull-right"><i class="fa fa-times fa-fw"></i></i>Delete</a>
+      </div>
+      <div class="loader">
+        <div class="loader-title">Patient Cache:</div>
+        <div class="loader-number">1839</div>
+        <a class="btn-primary btn pull-right"><i class="fa fa-times fa-fw"></i></i>Delete</a>
+      </div>
+      <div class="loader">
+        <div class="loader-title">Providers loaded:</div>
+        <div class="loader-number">1839</div>
+        <a class="btn-primary btn pull-right"><i class="fa fa-times fa-fw"></i>Delete</a>
+      </div>
+      <div class="loader">
+        <div class="loader-upload">
+          <input id="file" name="file" type="file">
+        </div>
+        <a class="btn btn-primary"><i class="fa fa-upload fa-fw"></i>Upload</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
